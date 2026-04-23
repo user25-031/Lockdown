@@ -4,7 +4,7 @@ public class Area2Controller : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
     private GameObject enemy;
-    private Vector3 spawnPoint = new Vector3(-240, 1, 0);
+    private Vector3 spawnPoint = new Vector3(-240, -39, 0);
     GameObject[] enemies = new GameObject[5];
     bool allNull;
     bool hasTriggered = false;

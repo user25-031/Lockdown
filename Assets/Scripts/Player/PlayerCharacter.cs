@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 
 public class PlayerCharacter : MonoBehaviour
 {
@@ -15,7 +14,7 @@ public class PlayerCharacter : MonoBehaviour
         float healthPercent = (float)health / maxHealth;
         Messenger<float>.Broadcast(GameEvent.HEALTH_CHANGED, healthPercent);
         Debug.Log("Health: " + health);
-        if (health == 0)
+        if (health <= 0)
         {
             Messenger.Broadcast(GameEvent.PLAYER_DEAD);
         }

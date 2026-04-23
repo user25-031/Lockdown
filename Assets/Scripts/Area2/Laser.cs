@@ -12,8 +12,9 @@ public class Laser : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
             return;
-        Debug.Log("Hit: " + other.name);
+        }
         PlayerCharacter player = other.GetComponent<PlayerCharacter>();
         if (player != null)
         {

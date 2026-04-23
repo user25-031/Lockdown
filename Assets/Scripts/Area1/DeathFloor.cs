@@ -6,7 +6,7 @@ public class DeathFloor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Kill Player");
+            Messenger.Broadcast(GameEvent.PLAYER_DEAD);
         }
     }
 }

@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundMask;
     [SerializeField] Animator anim;
+    [SerializeField] UIManager uiMan;
     float speed = 20f;
     float gravity = -9.81f;
     float jumpHeight = 10f;
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public void OnPickupBattery(int value)
     {
         battery += value;
+        uiMan.UpdateScore(battery);
         controller.enabled = false;
         transform.position = Vector3.zero;
         controller.enabled = true;
